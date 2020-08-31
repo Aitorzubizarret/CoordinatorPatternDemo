@@ -8,13 +8,20 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, Storyboarded {
+    weak var coordinator: MainCoordinator?
+    
+    // UI
+    @IBAction func firstButtonTapped(_ sender: Any) {
+        coordinator?.goToFirst()
+    }
+    @IBAction func secondButtonTapped(_ sender: Any) {
+        coordinator?.goToSecond()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
 }
 
