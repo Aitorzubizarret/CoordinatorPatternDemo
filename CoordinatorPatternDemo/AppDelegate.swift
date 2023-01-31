@@ -11,27 +11,26 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    // Main Coordinator.
-    var coordinator: MainCoordinator?
     var window: UIWindow?
+    private var mainCoordinator: Coordinator? // Main Coordinator.
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+        print("AppDelegate")
         ///
-        /// COORDINATOR PATTERN.
-        /// This only works for iOS 12 and older versions. For iOS 13 and newer go to SceneDelegate.
+        /// Coordinator Pattern.
+        /// AppDelegate only works for iOS 12 and older versions. For iOS 13 and newer go to SceneDelegate.
         ///
         
         // Creates and initialize the Navigation Controller.
         let navController = UINavigationController()
         
         // Creates the Main Coordinator with the Navigation Controller, and starts it.
-        coordinator = MainCoordinator(navigationController: navController)
-        coordinator?.start()
+        mainCoordinator = MainCoordinator(navigationController: navController)
+        mainCoordinator?.start()
         
         // Creates the window and adds the navigation controller as the root view.
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = navController
+        window?.rootViewController = mainCoordinator?.navigationController
         window?.makeKeyAndVisible()
         
         return true

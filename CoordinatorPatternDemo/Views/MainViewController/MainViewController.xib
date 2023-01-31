@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="CoordinatorPatternDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="goToFirstVCButton" destination="aOU-y1-gXG" id="AIt-Wh-q8M"/>
+                <outlet property="goToSecondVCButton" destination="d65-DJ-R8Y" id="JME-7y-gf1"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOU-y1-gXG">
+                    <rect key="frame" x="16" y="79" width="361" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="gJb-hX-9f4"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Go to First ViewController"/>
+                    <connections>
+                        <action selector="goToFirstVCButtonTapped:" destination="-1" eventType="touchUpInside" id="Io2-ho-wbt"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d65-DJ-R8Y">
+                    <rect key="frame" x="16" y="134" width="361" height="35"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Go to Second ViewController"/>
+                    <connections>
+                        <action selector="goToSecondVCButtonTapped:" destination="-1" eventType="touchUpInside" id="YVW-xo-eVC"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="d65-DJ-R8Y" firstAttribute="trailing" secondItem="aOU-y1-gXG" secondAttribute="trailing" id="1fr-hR-EK9"/>
+                <constraint firstItem="aOU-y1-gXG" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="34G-Ah-kau"/>
+                <constraint firstItem="d65-DJ-R8Y" firstAttribute="top" secondItem="aOU-y1-gXG" secondAttribute="bottom" constant="20" id="8T2-pT-qdT"/>
+                <constraint firstItem="aOU-y1-gXG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="K3Q-uM-KPS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aOU-y1-gXG" secondAttribute="trailing" constant="16" id="Vg3-Sa-vEd"/>
+                <constraint firstItem="d65-DJ-R8Y" firstAttribute="height" secondItem="aOU-y1-gXG" secondAttribute="height" id="e9t-ew-Vjn"/>
+                <constraint firstItem="d65-DJ-R8Y" firstAttribute="leading" secondItem="aOU-y1-gXG" secondAttribute="leading" id="jpI-R4-Tyb"/>
+            </constraints>
+            <point key="canvasLocation" x="139.69465648854961" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
